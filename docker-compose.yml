@@ -7,6 +7,7 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - ./docker-compose.yml:/src/docker-compose2.yml
+      - ./test-volumes:/src/test-volumes2
     ports:
      - "8079:80"
     environment:
