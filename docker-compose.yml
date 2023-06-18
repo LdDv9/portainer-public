@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./docker-compose.yml:./docker-compose2.yml
+      - ./docker-compose.yml:/app/docker-compose2.yml
       # - ./test-volumes:/src/test-volumes2
     # ports:
     #  - "8079:80"
