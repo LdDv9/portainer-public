@@ -6,9 +6,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile
     volumes:
-      - type: bind
-        source: ./docker-compose.yml
-        target: /src/docker-compose2.yml
+      - ./docker-compose.yml:/src/docker-compose2.yml
     ports:
      - "8079:80"
     environment:
