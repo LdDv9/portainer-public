@@ -7,8 +7,13 @@ services:
       dockerfile: ./Dockerfile
     pull_policy: build
     volumes:
-      - ${PWD}/docker-compose.yml:/app/docker-compose2.yml
-      - ${PWD}/test-volumes:/app/test-volumes2
+      - type: bind
+        source: ./docker-compose.yml
+        target: /app/docker-compose2.yml
+        read_only: true
+    # volumes:
+      # - ${PWD}/docker-compose.yml:/app/docker-compose2.yml
+      # - ${PWD}/test-volumes:/app/test-volumes2
     # ports:
     #  - "8079:80"
     environment:
