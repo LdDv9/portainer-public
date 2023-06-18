@@ -6,13 +6,14 @@ services:
       context: .
       dockerfile: ./Dockerfile
     pull_policy: build
-    volumes:
-      - type: volume
-        source: ./docker-compose.yml
-        target: /app/docker-compose2.yml
-        # read_only: true
     # volumes:
-      # - ./docker-compose.yml:/app/docker-compose2.yml
+      # - type: volume
+        # source: ./docker-compose.yml
+        # target: /app/docker-compose2.yml
+        # read_only: true
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./docker-compose.yml:/app/docker-compose2.yml"
       # - ./test-volumes:/app/test-volumes2
     # ports:
     #  - "8079:80"
