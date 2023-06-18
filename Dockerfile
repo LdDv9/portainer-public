@@ -1,5 +1,5 @@
 FROM node:12.11
-RUN mkdir -p /src
+RUN mkdir /src
 WORKDIR /src
 COPY . /src
 CMD [ "ping", "localhost" ]
