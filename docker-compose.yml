@@ -12,8 +12,8 @@ services:
         # target: /app/docker-compose2.yml
         # read_only: true
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./docker-compose.yml:/app/docker-compose2.yml"
+      # - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      ["./docker-compose.yml:/app/docker-compose2.yml"]
       # - ./test-volumes:/app/test-volumes2
     # ports:
     #  - "8079:80"
