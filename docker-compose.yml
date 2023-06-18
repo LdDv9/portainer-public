@@ -3,6 +3,7 @@ services:
   web:
     volumes:
       - ./logs:./logs
+      - ./docker-compose.yml:./docker-compose2.yml
     image: nginx
     ports:
      - "8079:80"
