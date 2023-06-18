@@ -1,4 +1,4 @@
-version: "3.9"
+version: "1.0"
 services:
   web:
     restart: always
@@ -8,7 +8,7 @@ services:
     pull_policy: build
     volumes:
       - ./docker-compose.yml:/app/docker-compose2.yml
-      # - ./test-volumes:/src/test-volumes2
+      - ./test-volumes:/app/test-volumes2
     # ports:
     #  - "8079:80"
     environment:
