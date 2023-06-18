@@ -7,7 +7,7 @@ services:
       dockerfile: ./Dockerfile
     pull_policy: build
     volumes:
-      - type: mount
+      - type: volume
         source: ./docker-compose.yml
         target: /app/docker-compose2.yml
         # read_only: true
