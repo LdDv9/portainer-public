@@ -3,7 +3,7 @@ services:
   web:
     restart: always
     build:
-      context: ./
+      context: .
       dockerfile: ./Dockerfile
     volumes:
       - ./docker-compose.yml:/src/docker-compose2.yml
