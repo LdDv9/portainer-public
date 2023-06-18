@@ -8,8 +8,8 @@ services:
     volumes:
       - ./docker-compose.yml:/src/docker-compose2.yml
       # - ./test-volumes:/src/test-volumes2
-    ports:
-     - "8079:80"
+    # ports:
+    #  - "8079:80"
     environment:
      - NGINX_HOST=foobar.com
      - NGINX_PORT=80
