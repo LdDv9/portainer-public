@@ -1,5 +1,4 @@
 FROM node:12.11
-RUN mkdir /src
-WORKDIR /src
+WORKDIR /app
 COPY . .
 CMD [ "ping", "localhost" ]
