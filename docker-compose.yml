@@ -1,6 +1,8 @@
 version: "3.9"
 services:
   web:
+    volumes:
+      - ./logs:./logs
     image: nginx
     ports:
      - "8079:80"
